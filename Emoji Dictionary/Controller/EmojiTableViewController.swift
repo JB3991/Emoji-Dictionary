@@ -9,7 +9,7 @@ import UIKit
 
 var emojis: [Emoji] = [
     Emoji(symbol: "😀", name: "Grinning Face",
-    description: "A typical smiley face.", usage: "happiness"),
+          description: "A typical smiley face.", usage: "happiness"),
     Emoji(symbol: "😕", name: "Confused Face",
           description: "A confused, puzzled face.", usage: "unsure what to think; displeasure"),
     Emoji(symbol: "😍", name: "Heart Eyes",
@@ -33,10 +33,13 @@ class EmojiTableViewController: UITableViewController {
         super.viewDidLoad()
 
     }
-
+    
+    @IBOutlet weak var editBarButton: UIBarButtonItem!
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
+        
         return 1
     }
 
@@ -44,8 +47,9 @@ class EmojiTableViewController: UITableViewController {
         if section == 0 {
             return emojis.count
         } else {
-        return 0
-    }
+            return 0
+        }
+        
 }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -53,9 +57,31 @@ class EmojiTableViewController: UITableViewController {
         let emoji = emojis[indexPath.row]
         cell.textLabel?.text = "\(emoji.symbol) - \(emoji.name)"
         cell.detailTextLabel?.text = emoji.description
-
+        cell.showsReorderControl = true
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let emoji = emojis[indexPath.row]
+        print("\(emoji.symbol) \(indexPath)")
+    }
+    
+    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
+        let movedEmoji = emojis.remove(at: fromIndexPath.row)
+        emojis.insert(movedEmoji, at: to.row)
+        tableView.reloadData()
+    }
+    
+    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return.none
+    }
+    
+    @IBAction func editButtonTapped(_ sender: UIBarButtonItem) {
+        let tableViewEditingMode = tableView.isEditing
+        tableView.setEditing(!tableViewEditingMode, animated: true)
+        
+    }
+    
 
     /*
     // Override to support conditional editing of the table view.

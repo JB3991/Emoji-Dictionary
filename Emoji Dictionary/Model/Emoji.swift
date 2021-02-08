@@ -18,5 +18,6 @@ struct Emoji {
         self.name = name
         self.description = description
         self.usage = usage
+        
     }
 }
