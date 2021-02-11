@@ -14,6 +14,7 @@
 		489046AE25CFF61C00DAD622 /* Emoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489046AD25CFF61C00DAD622 /* Emoji.swift */; };
 		489046B225CFF77600DAD622 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 489046B125CFF77600DAD622 /* Main.storyboard */; };
 		489046B925CFF7FB00DAD622 /* EmojiTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489046B825CFF7FB00DAD622 /* EmojiTableViewController.swift */; };
+		489046BE25D5C09F00DAD622 /* EmojiTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489046BD25D5C09F00DAD622 /* EmojiTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		489046AD25CFF61C00DAD622 /* Emoji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emoji.swift; sourceTree = "<group>"; };
 		489046B125CFF77600DAD622 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		489046B825CFF7FB00DAD622 /* EmojiTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiTableViewController.swift; sourceTree = "<group>"; };
+		489046BD25D5C09F00DAD622 /* EmojiTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				489046B125CFF77600DAD622 /* Main.storyboard */,
+				489046BD25D5C09F00DAD622 /* EmojiTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -166,6 +169,7 @@
 			files = (
 				489046B925CFF7FB00DAD622 /* EmojiTableViewController.swift in Sources */,
 				489046AE25CFF61C00DAD622 /* Emoji.swift in Sources */,
+				489046BE25D5C09F00DAD622 /* EmojiTableViewCell.swift in Sources */,
 				4890469725CFF54800DAD622 /* AppDelegate.swift in Sources */,
 				4890469925CFF54800DAD622 /* SceneDelegate.swift in Sources */,
 			);
